@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*
+    display: grid;
+    place-items: center;
+    */
+    background-color: rgb(2, 6, 27);
+    display: flex;
+}
+
+.container1,
+.containerTitleA,
+.containerTitleB{
+    width: 1px;
+    height: 1px;
+}
+.container1{
+    position: relative;
+    display: grid;
+    place-items: center;
+    left: calc(60% - 300px);
+    top: 50vh;
+}
+.containerTitleA,
+.containerTitleB{
+    position: relative;
+    display: grid;
+    place-items: center;
+    right: 1px;
+    top: -2px;
+    width: 1px;
+    height: 1px;
+    border-radius: 25px;
+}
+.containerTitleA{
+  left: 5px;
+}
+.form-title{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+#form{
+    background-color: rgb(12, 34, 143);
+    padding: 2rem;
+    color:white;
+    width: 280px;
+}
+.inputsCharacter{
+    width: 280px;
+    margin-bottom: 10px;
+}
+
+.positionButton{
+    display: flex;
+    justify-content: space-between;
+}
+.character,
+.radio{
+    margin:5px 0px 5px 0;
+    width: 80%;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+}
+.radio{
+    width: 20%;
+}
+.plusInputButton,
+.subtmitButton,
+.resetInputButton,
+.clearInputButton{
+    color:white;
+    background:none;
+    height: 30px;
+    width: 80px;
+    border: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.resetInputButton{
+    display: none;
+}
+.resetInputButton.active{
+    display: block;
+}
+.giro{
+    animation-name: giro;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes giro{
+    0%{
+
+    }
+    50%{
+        transform: rotateZ(180deg); 
+        /*transform:rotate3D(180,20,90,190deg);*/
+    }
+    100%{
+        transform: rotateZ(360deg); 
+    }
+}
+
+.colorItem{
+  margin: 0;
+  color: white;
+  opacity: 0.4; 
+  position: absolute;
+  cursor: default;   
+}
+
+.colorItem:hover{
+  opacity: 1;
+}
+/*
+#form{
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+*/
